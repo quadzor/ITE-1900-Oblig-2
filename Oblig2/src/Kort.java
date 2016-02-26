@@ -55,8 +55,8 @@ public abstract class Kort {
 
 	@Override
 	public String toString() {
-		return "Kort [Fornavn =" + fornavn + ", Etternavn =" + etternavn + ", pin =" + pin + ", Kortnummer ="
-				+ kortnummer + ", Sperret kort =" + sperretKort + "]";
+		return "Kort [Fornavn = " + fornavn + ", Etternavn = " + etternavn + ", pin = " + pin + ", Kortnummer = "
+				+ kortnummer + ", Sperret kort = " + sperretKort + "]";
 	}
 
 }
