@@ -14,15 +14,19 @@ public class KortTest {
 			Kort kort = (Kort) reg.get(i);
 			System.out.print(kort);
 			System.out.println("\nTest av kort: med kode 1234 er" + (kort.sjekkPin(1234) ? " gyldig" : " ugyldig"));
-			System.out.println("Test av kort: med kode 9999 er" + (kort.sjekkPin(9999) ? " gyldig\n" : " ugyldig\n"));
+			System.out.println("\nTest av kort: med kode 9999 er" + (kort.sjekkPin(9999) ? " gyldig" : " ugyldig"));
 		}
 
-		Ansatt a1 = (Ansatt) k1;
+		Ansatt a1 = (Ansatt) k1.clone();
+
+		System.out.println("Samme referanse? " + (a1 == k1));
+		System.out.println("Er de like? " + a1.compareTo(k1));
 
 		System.out.println("Bonus er " + a1.calculateBonus());
 		System.out.println("Kreditt er " + a1.calculateCredit());
 
 		a1.setNavn("Mikael Sundby");
 		System.out.println(a1);
+		System.out.println(k1);
 	}
 }
